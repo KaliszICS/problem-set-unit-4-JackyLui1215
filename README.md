@@ -41,6 +41,8 @@ Do not forget to comment and document your code!
 Example Run:
 
 
+		Welcome to the High Low Guessing Game.
+		
 		Input a number of rounds to play: 2
 	
 		Round 1:
@@ -80,6 +82,8 @@ Check if all input is valid.  They cannot input negative numbers or numbers outs
 
 Example Run:
 
+
+		Welcome to the High Low Guessing Game.
 
 		Input a number of rounds to play: 0
 
@@ -144,14 +148,15 @@ In the event of the even value being a fraction (.5), use both numbers above and
 Example Run:
 
 
+		Welcome to the High Low Guessing Game.
+		
 		Input a number of rounds to play: 0
 
 		Invalid Input!
  		Input a number of rounds to play: 2
 
-		What Range would you like to play between?
-		Minimum Value: -5
-		Maximum Value: 5
+		What Range would you like to play between (#-#)?
+		-5-5
 	
 		Round 1:
 	
