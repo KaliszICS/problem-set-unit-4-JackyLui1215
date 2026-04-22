@@ -44,7 +44,7 @@ public class ProblemSet {
 			System.out.print("Maximum Value and Minimum Value (#-#): ");
 			maxOrMinNum=scanner.nextLine();
 			maxOrMinNum = maxOrMinNum.replace(" ", "");
-			int dash = maxOrMinNum.indexOf("-");
+			int dash = maxOrMinNum.indexOf("-", 1);
 			if (dash != -1) {
 				firstNum = maxOrMinNum.substring(0, dash); //seperates the first number
 				secondNum = maxOrMinNum.substring((dash + 1)); //seperates the second number
@@ -92,12 +92,12 @@ public class ProblemSet {
 					option = scanner.nextInt();
 					scanner.nextLine();
 				}
-				else {
-					System.out.print("Choose a valid option.");
-					scanner.nextLine();
+				if (option < 1 || option > 3) {
+					System.out.println("Choose a valid option. \n");
 					option = -1;
 				}
 			}
+			scanner.nextLine();
 			boolean correct = false;
 			if (option == 1) { //High
 				if (guessNumber > evenHigh) {
