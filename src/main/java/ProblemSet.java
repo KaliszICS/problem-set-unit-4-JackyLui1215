@@ -70,8 +70,8 @@ public class ProblemSet {
 				}
 			}
 		} while (!valid);
-		int num1 = Integer.parseInt(firstNum);
-		int num2 = Integer.parseInt(secondNum);
+		int num1 = Integer.parseInt(firstNum); //parses first number
+		int num2 = Integer.parseInt(secondNum); //parses second number
 		int max = Math.max(num1, num2);
 		int min = Math.min(num1, num2);
 		int sum = max + min;
@@ -80,10 +80,12 @@ public class ProblemSet {
 		int countRounds = 0;
 		int guessNumber;
 		int score = 0;
+		System.out.println("============================================\n");
 		do {
 			guessNumber = randomNumberGenerator(min, max); //generates the random number
-
-			System.out.println("\nRound " + (countRounds + 1) + "\n"); //prints the rounds
+			System.out.println("---------------");
+			System.out.println(" |  Round " + (countRounds + 1) + " |"); //prints the rounds
+			System.out.println("---------------\n");
 			System.out.println(menu(max, min, evenLow, evenHigh)); //prompts user with the menu
 			int option = -1;
 			while (option < 1 || option > 3 ) { //ensures option chose is between 1-3
@@ -92,12 +94,11 @@ public class ProblemSet {
 					option = scanner.nextInt();
 					scanner.nextLine();
 				}
-				if (option < 1 || option > 3) {
+				if (option < 1 || option > 3) { //Error message
 					System.out.println("Choose a valid option. \n");
 					option = -1;
 				}
 			}
-			scanner.nextLine();
 			boolean correct = false;
 			if (option == 1) { //High
 				if (guessNumber > evenHigh) {
