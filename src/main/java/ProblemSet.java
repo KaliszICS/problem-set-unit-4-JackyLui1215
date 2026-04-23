@@ -94,9 +94,9 @@ public class ProblemSet {
 					option = scanner.nextInt();
 					scanner.nextLine();
 				}
-				if (option < 1 || option > 3) { //Error message
+				else { //Error message
+					scanner.nextLine();
 					System.out.println("Choose a valid option. \n");
-					option = -1;
 				}
 			}
 			boolean correct = false;
@@ -124,7 +124,7 @@ public class ProblemSet {
 			else {
 				System.out.println("\nCorrect. " + "The number was " + guessNumber + ".");
 			}
-			System.out.println("Current score: " + score);
+			System.out.println("Current score: " + score + "\n");
 			countRounds++;
 		} while (countRounds < rounds);
 		System.out.println("Total score: " + score);
@@ -157,7 +157,7 @@ public class ProblemSet {
 			return false;
 		}
 		int i = 0;
-		if(number.charAt(0) == '-') {
+		if(number.charAt(0) == '-') { //checks for a negative value at the first
 			i=1;
 		}
 		for (; i < number.length(); i++) {
