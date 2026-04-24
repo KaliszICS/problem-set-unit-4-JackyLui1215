@@ -46,8 +46,8 @@ public class ProblemSet {
 			maxOrMinNum = maxOrMinNum.replace(" ", "");
 			int dash = maxOrMinNum.indexOf("-", 1);
 			if (dash != -1) {
-				firstNum = maxOrMinNum.substring(0, dash); //seperates the first number
-				secondNum = maxOrMinNum.substring((dash + 1)); //seperates the second number
+				firstNum = maxOrMinNum.substring(0, dash); //separates the first number
+				secondNum = maxOrMinNum.substring((dash + 1)); //separates the second number
 			}
 			else {
 				firstNum = "";
@@ -74,9 +74,8 @@ public class ProblemSet {
 		int num2 = Integer.parseInt(secondNum); //parses second number
 		int max = Math.max(num1, num2);
 		int min = Math.min(num1, num2);
-		int sum = max + min;
-		int evenLow = sum / 2;
-		int evenHigh = (sum + 1) / 2;
+		int evenLow = (int) Math.floor((double) (min + max) / 2);
+		int evenHigh = (int) Math.ceil((double) (min + max) / 2);
 		int countRounds = 0;
 		int guessNumber;
 		int score = 0;
@@ -138,7 +137,7 @@ public class ProblemSet {
 	}
 
 
-	public static String menu (int high, int low, int evenLow, int evenHigh) {  //promopt for the game
+	public static String menu (int high, int low, int evenLow, int evenHigh) {  //prompt for the game
 		if (evenLow == evenHigh) {
 			return "Please select:\n" + "1. High " + "(" + (evenLow + 1) +" to " + high + ")\n" + "2. Low " + "(" + low + " to " + (evenLow - 1) + ")\n" + "3. Even " + "(" + evenLow + ")";
 		}
@@ -153,7 +152,7 @@ public class ProblemSet {
 	}
 
 	public static boolean intChecker(String number) { //validates if a integer is actually an integer
-		if (number.length() == 0) {
+		if (number.length() == 0 || number.equals("-")) {
 			return false;
 		}
 		int i = 0;
