@@ -41,7 +41,7 @@ public class ProblemSet {
 
 		System.out.println("\nWhat range would you like to play between? \n");
 		do { //loops until a valid ranged is entered
-			System.out.print("Maximum Value and Minimum Value (#-#): ");
+			System.out.print("Input a range (#-#): ");
 			maxOrMinNum=scanner.nextLine();
 			maxOrMinNum = maxOrMinNum.replace(" ", "");
 			int dash = maxOrMinNum.indexOf("-", 1);
