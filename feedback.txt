@@ -1,0 +1,10 @@
+K(30%): 100
+I(30%): 95
+C(10%): 100
+A(30%): 97
+97.4
+
+Ranges should not have a "to" between them when they are one number.  Even should have a "to" for consistency.
+Small thing, but there is some inconsistency about when an error message and when there isn't one in your program, I would try to make it consistent so a user knows if there is an issue or not.
+I would still recommend a few more functions to break up areas where you do only one thing, but well done!
+Otherwise great work!
